@@ -28,6 +28,19 @@
 		<script type="text/javascript">
 			var mymap = L.map('mapid').setView([16.41065, 120.59469], 15); // Baguio City, Philippines // [NORTH, EAST] [LAT, LONG]
 			
+			map.locate({setView: true, maxZoom: 16});
+			
+			function onLocationFound(e) {
+			    var radius = e.accuracy / 2;
+
+			    L.marker(e.latlng).addTo(map)
+			        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+			    L.circle(e.latlng, radius).addTo(map);
+			}
+
+			map.on('locationfound', onLocationFound);
+			
 			L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFydGlhbndvcm0xNyIsImEiOiJjajk0ejF1czAxY3N6MnFtd3M5OHV2NXZiIn0.FtzpGxT_6L2hnPA-xRQBRA', {
 				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 				maxZoom: 18,

@@ -34,28 +34,37 @@
 				accessToken: 'your.mapbox.access.token'
 			}).addTo(mymap);
 			
+			
+			var marker_mines_view = L.marker([16.42065, 120.62563]).addTo(mymap); // Mines View
+			marker_mines_view.bindPopup("<b>Mines View</b><br />");
+			
+			var marker_good_shepherd = L.marker([16.421896, 120.625543]).addTo(mymap); // Good Shepherd
+			marker_good_shepherd.bindPopup("<b>Good Shepherd</b><br />");
+			
+			var marker_wright_park = L.marker([16.416071, 120.616627]).addTo(mymap); // Wright Park
+			marker_wright_park.bindPopup("<b>Wright Park</b><br />");
+			
+			var marker_the_mansion = L.marker([16.413786, 120.620290]).addTo(mymap); // The Mansion
+			marker_wright_park.bindPopup("<b>The Mansion</b><br />");
+			
+			var marker_grotto_steps = L.marker([16.409782, 120.580722]).addTo(mymap); // Grotto Steps
+			marker_grotto_steps.bindPopup("<b>Grotto Steps</b><br />");
+			
+			var marker_baguio_night_market = L.marker([16.412951, 120.595372]).addTo(mymap); // Baguio Night Market
+			marker_baguio_night_market.bindPopup("<b>Baguio Night Market</b><br />");
+			
+			var marker_mary_knoll = L.marker([16.401123, 120.589536]).addTo(mymap); // Mary Knoll
+			marker_mary_knoll.bindPopup("<b>Mary Knoll</b><br />");
+			
+			var marker_strawberry_farm = L.marker([16.458027, 120.587838]).addTo(mymap); // Strawberry Farm
+			marker_strawberry_farm.bindPopup("<b>Strawberry Farm</b><br />");
+			
+			var marker_bencab_museum = L.marker([16.410666, 120.550385]).addTo(mymap); // BenCab Museum
+			marker_bencab_museum.bindPopup("<b>BenCab Museum</b><br />");
+			
 			var marker_burnham_park = L.marker([16.41052, 120.59469]).addTo(mymap); // Burnham Park
 			marker_burnham_park.bindPopup("<b>Burnham Park</b><br />").openPopup();
 			
-			var marker_mines_view = L.marker([16.42065, 120.62563]).addTo(mymap); // Mines View
-			marker_mines_view.bindPopup("<b>Mines View</b><br />").openPopup();
-			
-			var marker_good_shepherd = L.marker([16.421896, 120.625543]).addTo(mymap); // Good Shepherd
-			marker_good_shepherd.bindPopup("<b>Good Shepherd</b><br />").openPopup();
-			
-			var marker_wright_park = L.marker([16.416071, 120.616627]).addTo(mymap); // Wright Park
-			marker_wright_park.bindPopup("<b>Wright Park</b><br />").openPopup();
-			
-			var marker_the_mansion = L.marker([16.413786, 120.620290]).addTo(mymap); // The Mansion
-			marker_wright_park.bindPopup("<b>The Mansion</b><br />").openPopup();
-			
-			var marker_grotto_steps = L.marker([16.409782, 120.580722]).addTo(mymap); // Grotto Steps
-			marker_grotto_steps.bindPopup("<b>Grotto Steps</b><br />").openPopup();
-			
-			var marker_baguio_night_market = L.marker([16.412951, 120.595372]).addTo(mymap); // Baguio Night Market
-			marker_baguio_night_market.bindPopup("<b>Baguio Night Market</b><br />").openPopup();
-			
-		
 			var popup = L.popup();
 
 			function onMapClick(e) {

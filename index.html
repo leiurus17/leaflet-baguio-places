@@ -36,29 +36,7 @@
 			
 			var marker = L.marker([14.6097, 120.9896]).addTo(mymap); // University of Sto. Tomas
 			
-			var circle = L.circle([14.5830, 120.9800], { // Rizal Park area
-			    color: 'red',
-			    fillColor: '#f03',
-			    fillOpacity: 0.5,
-			    radius: 600
-			}).addTo(mymap);
-			
-			var polygon = L.polygon([
-			    [14.5730, 120.9776],
-			    [14.5830, 120.9886],
-			    [14.5930, 120.9896]
-			]).addTo(mymap);
-			
 			marker.bindPopup("<b>University of Sto. Tomas!</b><br>Go USTe!").openPopup();
-			circle.bindPopup("I am a circle.");
-			polygon.bindPopup("I am a polygon.");
-			
-			var popup = L.popup()
-		    .setLatLng([14.5930, 120.9826])
-		    .setContent("I am a standalone popup.")
-		    .openOn(mymap);
-			
-			var popup = L.popup();
 
 			function onMapClick(e) {
 			    popup
